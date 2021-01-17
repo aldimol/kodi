@@ -970,7 +970,7 @@ class Seasonvar():
             self.contentFilter = content
             
         kind = self.getFilterPrefix(filterType)
-        
+logging.warning(kind)        
         filterdiv = common.parseDOM(content, "select", attrs={"data-filter": kind})[0]
         filterlist = common.parseDOM(filterdiv, "option")
         filteridlist = common.parseDOM(filterdiv, "option", ret="value")
